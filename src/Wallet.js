@@ -2,6 +2,7 @@ import {React, useState, useEffect } from 'react';
 import {ethers} from "ethers";
 import styles from './Wallet.module.css';
 import simple_token_abi from './Contracts/simple_token_abi.json';
+import MyToken_abi from './Contracts/MyToken_abi.json';
 import Interactions from './Interactions';
 import TokenGenerator from './TokenGenerator';
 import TokenViewer from './TokenViewer';
