@@ -3,6 +3,7 @@ import {ethers} from "ethers";
 import styles from './Wallet.module.css';
 import simple_token_abi from './Contracts/simple_token_abi.json';
 import Interactions from './Interactions';
+import TokenGenerator from './TokenGenerator';
 
 const Wallet = () =>{
 
@@ -95,6 +96,8 @@ const Wallet = () =>{
             </div>
 
             <Interactions contract= {contract}/>
+            <br></br>
+            <TokenGenerator />
         </div>
     );
 
