@@ -1,5 +1,5 @@
 import {React, useState, useEffect } from 'react';
-import {ethers} from '/node_modules/ethers/dist/ethers.min.js';
+import {ethers} from "ethers";
 import styles from './Wallet.module.css';
 import simple_token_abi from './Contracts/simple_token_abi.json';
 import Interactions from './Interactions';
@@ -43,7 +43,7 @@ const Wallet = () =>{
     };
 
     const updateEthers = () =>{
-        let tempProvider = new ethers.providers.Web3Provider(window.ethereum);
+        let tempProvider = new ethers.BrowserProvider(window.ethereum);
 
         let tempSigner =  tempProvider.getSigner();
 
@@ -52,6 +52,29 @@ const Wallet = () =>{
         setProvider(tempProvider);
         setSigner(tempSigner);
         setContract(tempContract);
+    }
+
+    useEffect(()=>{
+        if(contract != null){
+            updateBalance1();
+            updateTokenName1();
+        }
+    },[contract])
+
+    const updateBalance1 = async () =>{
+        let balanceBigN = await contract.balanceOf(defaultAccount);
+        let amountBigN = balanceBigN.toNumber();
+
+        let decimals = await contract.Decimals();
+
+        let tokenBalance = amountBigN/ Math.pow(10,decimals);
+
+        setBalance(tokenBalance);
+
+    }
+
+    const updateTokenName1 = async () =>{
+        setTokenName(await contract.name());
     }
 
     return (
@@ -68,8 +91,10 @@ const Wallet = () =>{
                  <div>
                     <h3>{tokenName} Balance: {balance}</h3>
                  </div>
-
+                {errorMessage}
             </div>
+
+            <Interactions contract= {contract}/>
         </div>
     );
 
