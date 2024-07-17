@@ -4,10 +4,12 @@ import styles from './Wallet.module.css';
 import simple_token_abi from './Contracts/simple_token_abi.json';
 import Interactions from './Interactions';
 import TokenGenerator from './TokenGenerator';
+import TokenViewer from './TokenViewer';
 
 const Wallet = () =>{
 
     const contractAdress = '0x8eE39Be1Ca8Ed375f5d18dfec4477f73793d22C9';
+    const MyTokenAdress = '0xF6F4D75ed12d8EEC300e395fbc62d4Ebc974CC09';
 
     const [tokenName, setTokenName] = useState("Token");
     const [connButtonText, setConnButtonText] = useState("Connect");
@@ -98,6 +100,8 @@ const Wallet = () =>{
             <Interactions contract= {contract}/>
             <br></br>
             <TokenGenerator />
+            <br></br>
+            <TokenViewer />
         </div>
     );
 

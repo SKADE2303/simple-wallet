@@ -3,10 +3,10 @@ import {ethers} from 'ethers'
 import styles from './Wallet.module.css'
 
 
-const TokenGenerator = () => {
+const TokenViewer = () => {
 	
 return (
-			<div className={styles.GenerationCard}>
+			<div className={styles.interactionsCard}>
 				<form >
 					<h3> Create Token </h3>
 						<p> Token Name </p>
@@ -24,4 +24,4 @@ return (
 		)
 }
 
-export default TokenGenerator;
+export default TokenViewer;
