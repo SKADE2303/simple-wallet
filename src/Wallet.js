@@ -10,7 +10,8 @@ import TokenViewer from './TokenViewer';
 const Wallet = () =>{
 
     const contractAdress = '0x8eE39Be1Ca8Ed375f5d18dfec4477f73793d22C9';
-    const MyTokenAdress = '0xF6F4D75ed12d8EEC300e395fbc62d4Ebc974CC09';
+    const MyTokenAdress = '0x066A46ECccd6cAC0b8e1d798633dA7e2b0fc50f5';
+    const TokenFactoryAddress = '0x42F2e779886CfaD43899834BaB7BE6631aD3ebaA';
 
     const [tokenName, setTokenName] = useState("Token");
     const [connButtonText, setConnButtonText] = useState("Connect");

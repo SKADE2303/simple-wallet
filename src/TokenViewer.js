@@ -5,9 +5,11 @@ import styles from './Wallet.module.css'
 
 const TokenViewer = () => {
 	
+	
+
 return (
 			<div className={styles.interactionsCard}>
-				<form >
+				<form onClick={func}>
 					<h3> Create Token </h3>
 						<p> Token Name </p>
 						<input type='text' id='tokenName' className={styles.addressInput}/>
