@@ -5,6 +5,8 @@ import styles from './Wallet.module.css'
 
 const TokenGenerator = () => {
 	
+//Create a function to make an instance of a token using tokenFactory.sol
+
 return (
 			<div className={styles.GenerationCard}>
 				<form >

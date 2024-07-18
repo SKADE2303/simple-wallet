@@ -5,7 +5,7 @@ import styles from './Wallet.module.css'
 
 const TokenViewer = () => {
 	
-
+//define functions to view all properties of the token by ID
 
 return (
 			<div className={styles.interactionsCard}>
