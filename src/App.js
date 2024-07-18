@@ -5,7 +5,7 @@ import Wallet from './Wallet.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style = {{backgroundImage: "url(/cute.jpg)"}}>
       <Wallet />
     </div>
   );

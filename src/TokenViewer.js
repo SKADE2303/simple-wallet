@@ -5,19 +5,19 @@ import styles from './Wallet.module.css'
 
 const TokenViewer = () => {
 	
-	
+
 
 return (
 			<div className={styles.interactionsCard}>
-				<form onClick={func}>
-					<h3> Create Token </h3>
-						<p> Token Name </p>
+				<form >
+					<h3> View Detials of a Specific Token </h3>
+						<p> Token Address </p>
 						<input type='text' id='tokenName' className={styles.addressInput}/>
 
 						<p> Token Symbol </p>
 						<input type='text' id='sendAmount' min='0' step='1'/>
 
-						<button type='submit' className={styles.button6}>Create</button>
+						<button type='submit' className={styles.button6}>View Details</button>
 						<div>
 							
 						</div>
