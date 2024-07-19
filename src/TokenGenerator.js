@@ -6,6 +6,9 @@ import styles from './Wallet.module.css'
 const TokenGenerator = () => {
 	
 //Create a function to make an instance of a token using tokenFactory.sol
+//Input parameters are token symbol and token name
+//Call the mint function from TokenFactory.sol
+//If token is created successfully, the website will give a popup of token created successfully
 
 return (
 			<div className={styles.GenerationCard}>
