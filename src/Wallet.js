@@ -3,10 +3,12 @@ import {ethers} from "ethers";
 import styles from './Wallet.module.css';
 import simple_token_abi from './Contracts/simple_token_abi.json';
 import MyToken_abi from './Contracts/MyToken_abi.json';
-//import Token_Factory_abi from './Contracts/Token_Factory.json';
+import Token_Factory_abi from './Contracts/Token_Factory_abi.json';
+import TokenBurner from './Burn';
 import Interactions from './Interactions';
 import TokenGenerator from './TokenGenerator';
 import TokenViewer from './TokenViewer';
+
 
 const Wallet = () =>{
 
@@ -105,6 +107,9 @@ const Wallet = () =>{
             <TokenGenerator />
             <br></br>
             <TokenViewer />
+            <br></br>
+            <TokenBurner />
+            <br></br>
         </div>
     );
 
