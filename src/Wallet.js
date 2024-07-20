@@ -51,7 +51,7 @@ const Wallet = () =>{
     };
 
     const updateEthers = () =>{
-        let tempProvider = new ethers.BrowserProvider(window.ethereum);
+        let tempProvider = new ethers.providers.Web3Provider(window.ethereum);
 
         let tempSigner =  tempProvider.getSigner();
 
