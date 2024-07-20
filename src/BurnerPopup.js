@@ -1,30 +1,18 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
- 
-export default function BurnerPopup() {
+
+const BurnerPopup = ({ message, onClose }) => {
     return (
-        <div>
-            <h4>Popup - GeeksforGeeks</h4>
-            <Popup trigger=
-                {<button> Click to open modal </button>} 
-                modal nested>
-                {
-                    close => (
-                        <div className='modal'>
-                            <div className='content'>
-                               Token burnt
-                            </div>
-                            <div>
-                                <button onClick=
-                                    {() => close()}>
-                                        Close tab
-                                </button>
-                            </div>
-                        </div>
-                    )
-                }
-            </Popup>
-        </div>
-    )
+        <Popup open={true} modal nested>
+            <div className='modal'>
+                <div className='content'>{message}</div>
+                <div>
+                    <button onClick={onClose}>Close</button>
+                </div>
+            </div>
+        </Popup>
+    );
 };
+
+export default BurnerPopup;
