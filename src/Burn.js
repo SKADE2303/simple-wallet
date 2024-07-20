@@ -12,6 +12,7 @@ const TokenBurner = () => {
 // Once deleted, the function should have a bool value changed which will enable a popup on the screem saying, "token deleted"
 // I'll add the front-end for the pop-up
 
+	
 
 return (
 			<div className={styles.interactionsCard}>
