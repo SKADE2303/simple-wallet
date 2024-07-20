@@ -8,7 +8,7 @@ import TokenBurner from './Burn';
 import Interactions from './Interactions';
 import TokenGenerator from './TokenGenerator';
 import TokenViewer from './TokenViewer';
-
+import Mint_Token from './Mint';
 
 const Wallet = () =>{
 
@@ -108,8 +108,11 @@ const Wallet = () =>{
             <br></br>
             <TokenViewer />
             <br></br>
+            <Mint_Token />
+            <br></br>
             <TokenBurner />
             <br></br>
+
         </div>
     );
 
