@@ -11,7 +11,7 @@ return (
 			<div className={styles.GenerationCard}>
 				<form  >
 					<h3> Mint Token </h3>
-						<p> Token Adress </p>
+						<p> Token Address </p>
 						<input type='text' id='tokenName' className={styles.addressInput}/>
 
 						<p> Number of tokens </p>
