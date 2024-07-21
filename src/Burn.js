@@ -54,8 +54,12 @@ return (
 					<h3> Burn a specific token </h3>
 						
 						<p> Token Symbol </p>
-						<input type='text' id='sendAmount' min='0' step='1'/>
+						<input type='text' id='sendAmounts' min='0' step='1'/>
 
+                        <p> Number of Tokens to Burn </p>
+						<input type='text' id='sendAmount' min='0' step='1'/>
+                        <br></br>
+                        <br></br>
 						<button type='submit' className={styles.button6}>Burn</button>
                         
 						<div>
