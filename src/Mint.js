@@ -24,7 +24,7 @@ const MintToken = () => {
 			const contract = new ethers.Contract(contractAddress, Token_Factory_abi, signer);
 
 			// Convert the amount to the appropriate decimal format
-			const formattedAmount = ethers.utils.parseUnits(amount, 18); // Adjust decimals if needed
+			const formattedAmount = ethers.utils.parseUnits(amount, 2); // Adjust decimals if needed
 
 			// Call the mint function
 			const tx = await contract.mint(tokenAddress, formattedAmount);
