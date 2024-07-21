@@ -1,17 +1,10 @@
-import {React, useState, useEffect} from 'react'
-import {ethers} from 'ethers'
-import styles from './Wallet.module.css'
+import React, { useState } from 'react';
+import styles from './Wallet.module.css';
 import Token_Factory_abi from './Contracts/Token_Factory_abi.json';
-
+import { ethers } from 'ethers';
 
 const TokenGenerator = () => {
-	
-//Create a function to make an instance of a token using tokenFactory.sol
-//Input parameters are token symbol and token name
-//Call the mint function from TokenFactory.sol
-//If token is created successfully, the website will give a popup of token created successfully
-
-const [tokenName, setTokenName] = useState('');
+	const [tokenName, setTokenName] = useState('');
 	const [tokenSymbol, setTokenSymbol] = useState('');
 	const [errorMessage, setErrorMessage] = useState('');
 
@@ -44,23 +37,33 @@ const [tokenName, setTokenName] = useState('');
 		}
 	};
 
-return (
-			<div className={styles.GenerationCard}>
-				<form onSubmit={handleCreateToken} >
-					<h3> Create Token </h3>
-						<p> Token Name </p>
-						<input type='text' id='tokenName' className={styles.addressInput}/>
+	return (
+		<div className={styles.GenerationCard}>
+			<form onSubmit={handleCreateToken}>
+				<h3>Create Token</h3>
+				<p>Token Name</p>
+				<input
+					type='text'
+					id='tokenName'
+					className={styles.addressInput}
+					value={tokenName}
+					onChange={(e) => setTokenName(e.target.value)}
+				/>
 
-						<p> Token Symbol </p>
-						<input type='text' id='sendAmount' min='0' step='1'/>
+				<p>Token Symbol</p>
+				<input
+					type='text'
+					id='tokenSymbol'
+					className={styles.addressInput}
+					value={tokenSymbol}
+					onChange={(e) => setTokenSymbol(e.target.value)}
+				/>
 
-						<button type='submit' className={styles.button6}>Create</button>
-						<div>
-							
-						</div>
+				<button type='submit' className={styles.button6}>Create</button>
+				{errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
 			</form>
-			</div>
-		)
-}
+		</div>
+	);
+};
 
 export default TokenGenerator;

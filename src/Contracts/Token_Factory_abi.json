@@ -77,6 +77,17 @@
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			}
+		],
+		"name": "TokenFactory__TokenSymbolAlreadyExits",
+		"type": "error"
+	},
+	{
 		"anonymous": false,
 		"inputs": [
 			{

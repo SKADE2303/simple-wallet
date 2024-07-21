@@ -13,8 +13,8 @@ import Mint_Token from './Mint';
 const Wallet = () =>{
 
     const contractAdress = '0x8eE39Be1Ca8Ed375f5d18dfec4477f73793d22C9';
-    const MyTokenAdress = '0x066A46ECccd6cAC0b8e1d798633dA7e2b0fc50f5';
-    const TokenFactoryAddress = '0x42F2e779886CfaD43899834BaB7BE6631aD3ebaA';
+    const MyTokenAdress = '0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8';
+    const TokenFactoryAddress = '0xf8e81D47203A594245E36C48e151709F0C19fBe8';
 
     const [tokenName, setTokenName] = useState("Token");
     const [connButtonText, setConnButtonText] = useState("Connect");
@@ -73,7 +73,7 @@ const Wallet = () =>{
         let balanceBigN = await contract.balanceOf(defaultAccount);
         let amountBigN = balanceBigN.toNumber();
 
-        let decimals = await contract.Decimals();
+        let decimals = await contract.decimals();
 
         let tokenBalance = amountBigN/ Math.pow(10,decimals);
 
